@@ -1,9 +1,17 @@
-import React from 'react'
+import { useState } from 'react';
+import Transactions from './Transactions.jsx';
 
 const Overview = () => {
+  const [showTransactions, setShowTransactions]= useState(false);
+  
+  function toggleTransactions(){
+      !showTransactions ? setShowTransactions(true): setShowTransactions(false);
+  }
+
   return (
     <>
       <div>
+        <h2>Overview</h2>
         <ul>
           <li>Income</li>
           <li>Expense</li>
@@ -11,8 +19,9 @@ const Overview = () => {
         </ul>
       </div>
       <div>
-        <h3>Quick Actions</h3>
-        <button>Add Transaction</button>
+        <h2>Quick Actions</h2>
+        <button onClick = {toggleTransactions}>Add Income/Expense</button>
+        {showTransactions && <Transactions/>}
         <button>Create Budget</button>
       </div>
     </>
