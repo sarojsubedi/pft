@@ -1,11 +1,13 @@
 import React from 'react'
+import logo from '../assets/logo.svg'
+import notificationbell from '../assets/notificationbell.svg'
 
 const Navbar = () => {
   return (
     <>
     <div>
-        <img src="" alt="app-logo" />
-        <h1>Personal Finance Tracker</h1>
+      <img src ={logo} alt="logo" />
+      <span><strong>Personal Finance Tracker</strong></span>
     </div>
     <div>
         <ul>
@@ -15,8 +17,8 @@ const Navbar = () => {
             <li>Goals</li>
             <li>Reports</li>
         </ul>
-        <img src="" alt="notification-bell" />
-        <img src="" alt="user-avatar" />
+        <img src={notificationbell} alt="notification-bell" />
+        <img src="null" alt="user-avatar" />
     </div>
     </>
   )
