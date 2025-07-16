@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState, useEffect } from 'react';
 
-const Dashboard = () => {
+const Dashboard = ({ balance = 0 }) => {
   const [userBalance, setUserBalance]= useState(0);
   const URL = '';
   
@@ -23,7 +23,7 @@ const Dashboard = () => {
         <h3>Income vs Expense</h3>
         <div className="card">
           last 6 mo chart here
-          <span><strong>Rs.{userBalance}</strong></span>
+          <span><strong>Rs.{balance}</strong></span>
           
         </div>
       </div>
