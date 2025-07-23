@@ -1,9 +1,10 @@
 import React from 'react'
 import { useState, useEffect } from 'react';
 
-const Dashboard = ({ balance = 0 }) => {
-  const [userBalance, setUserBalance]= useState(0);
-  const URL = '';
+
+const Dashboard = () => {
+  // const [userBalance, setUserBalance]= useState(0);
+  // const URL = '';
   
   // useEffect(() => {
   //   const katiPaisa = async () => {
@@ -23,7 +24,7 @@ const Dashboard = ({ balance = 0 }) => {
         <h3>Income vs Expense</h3>
         <div className="card">
           last 6 mo chart here
-          <span><strong>Rs.{balance}</strong></span>
+          <span><strong>Rs.</strong></span>
           
         </div>
       </div>
