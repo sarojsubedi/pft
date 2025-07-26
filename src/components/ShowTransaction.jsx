@@ -5,7 +5,7 @@ const ShowTransaction = () => {
   const [localData, setLocalData] = useState(0);
   useEffect(() => {
     async function getTransaction() {
-      const { data, error } = await supabase
+      const { data } = await supabase
         .from("userdata")
         .select("balance")
         .single();
