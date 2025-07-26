@@ -1,11 +1,13 @@
-import { useState } from 'react';
-import Transactions from './Transactions.jsx';
+import { useState } from "react";
+import Transactions from "./Transactions.jsx";
+import ShowTransaction from "./ShowTransaction.jsx";
 
 const Overview = () => {
-  const [showTransactions, setShowTransactions]= useState(false);
-  
-  function toggleTransactions(){
-      !showTransactions ? setShowTransactions(true): setShowTransactions(false);
+  const [showTransactions, setShowTransactions] = useState(false);
+  const [show, setShow] = useState(false);
+
+  function toggleTransactions() {
+    !showTransactions ? setShowTransactions(true) : setShowTransactions(false);
   }
 
   return (
@@ -20,12 +22,13 @@ const Overview = () => {
       </div>
       <div>
         <h2>Quick Actions</h2>
-        <button onClick = {toggleTransactions}>Add Income/Expense</button>
-        {showTransactions && <Transactions/>}
-        <button>Create Budget</button>
+        <button onClick={toggleTransactions}>Add Income/Expense</button>
+        {showTransactions && <Transactions />}
+        <button onClick={() => setShow(true)}>Show Transactions</button>
+        {show && <ShowTransaction />}
       </div>
     </>
-  )
-}
+  );
+};
 
-export default Overview
+export default Overview;

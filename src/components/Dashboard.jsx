@@ -1,10 +1,10 @@
-import React from 'react'
-import { useState, useEffect } from 'react';
+import React from "react";
+import { useState, useEffect } from "react";
 
-const Dashboard = ({ balance = 0 }) => {
-  const [userBalance, setUserBalance]= useState(0);
-  const URL = '';
-  
+const Dashboard = () => {
+  // const [userBalance, setUserBalance]= useState(0);
+  // const URL = '';
+
   // useEffect(() => {
   //   const katiPaisa = async () => {
   //   const reponse = await fetch (URL);
@@ -13,7 +13,7 @@ const Dashboard = ({ balance = 0 }) => {
   // };
   //   katiPaisa();
   // }, [userBalance]);
-  
+
   return (
     <>
       <div>
@@ -23,24 +23,21 @@ const Dashboard = ({ balance = 0 }) => {
         <h3>Income vs Expense</h3>
         <div className="card">
           last 6 mo chart here
-          <span><strong>Rs.{balance}</strong></span>
-          
+          <span>
+            <strong>Rs.</strong>
+          </span>
         </div>
       </div>
       <div>
         <h3>Spending by Category</h3>
-        <div className ="card">
-          monthly chart here
-        </div>
+        <div className="card">monthly chart here</div>
       </div>
       <div>
         <h3>Savings Goals</h3>
-        <div className="card">
-          savings by category ko bar
-        </div>
+        <div className="card">savings by category ko bar</div>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default Dashboard
+export default Dashboard;
