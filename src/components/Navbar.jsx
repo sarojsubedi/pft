@@ -5,10 +5,12 @@ import useravatar from "../assets/useravatar.svg";
 const Navbar = () => {
   return (
     <>
-      <div className="flex items-center">
+      <div className="flex items-center flex-wrap">
         <div className="flex flex-grow flex-row justify-start-safe gap-4 p-4">
           <img className="scale-100" src={logo} alt="logo" />
-          <strong>Personal Finance Tracker</strong>
+          <h1>
+            <strong>Personal Finance Tracker</strong>
+          </h1>
         </div>
         <div className="flex-grow flex-row">
           <ul className="flex flex-row justify-end-safe gap-4 p-4">

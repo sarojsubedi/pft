@@ -1,19 +1,4 @@
-import React from "react";
-import { useState, useEffect } from "react";
-
 const Dashboard = () => {
-  // const [userBalance, setUserBalance]= useState(0);
-  // const URL = '';
-
-  // useEffect(() => {
-  //   const katiPaisa = async () => {
-  //   const reponse = await fetch (URL);
-  //   const result = response.json();
-  //   setUserBalance(result);
-  // };
-  //   katiPaisa();
-  // }, [userBalance]);
-
   return (
     <>
       <div>
