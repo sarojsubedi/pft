@@ -35,8 +35,12 @@ const Transactions = () => {
             value={userInput}
             placeholder="Enter your income or expense"
             onChange={(e) => setUserInput(parseFloat(e.target.value))}
+            className="max-w-3xs border hover:border-gray-400"
           />
-          <button onClick={addTransaction}>Add transaction</button>
+          <br />
+          <button onClick={addTransaction} className="">
+            Add transaction
+          </button>
           <div>
             {isNaN(userInput) ? <span>Enter a valid number!</span> : <span />}
           </div>

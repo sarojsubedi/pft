@@ -5,7 +5,7 @@ import useravatar from "../assets/useravatar.svg";
 const Navbar = () => {
   return (
     <>
-      <div className="flex items-center flex-wrap">
+      <div className="flex items-center flex-wrap border-b border-gray-200">
         <div className="flex flex-grow flex-row justify-start-safe gap-4 p-4">
           <img className="scale-100" src={logo} alt="logo" />
           <h1>

@@ -7,11 +7,11 @@ function App() {
   return (
     <>
       <Navbar />
-      <div className="flex flex-row gap-4">
+      <div className="flex flex-row gap-4 flex-wrap md:flex-1">
         <div className="flex-wrap m-4 p-4">
           <Overview />
         </div>
-        <div className="flex-wrap m-4 p-4">
+        <div className="flex-wrap m-4 p-4 overflow-none">
           <Dashboard />
         </div>
       </div>

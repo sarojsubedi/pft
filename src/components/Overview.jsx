@@ -4,16 +4,18 @@ import ShowTransaction from "./ShowTransaction.jsx";
 
 const Overview = () => {
   const [showTransactions, setShowTransactions] = useState(false);
-  const [show, setShow] = useState(false);
+  const [addTransactions, setAddTransactions] = useState(false);
 
-  function toggleTransactions() {
+  const toggleAddTransactions = () => {
+    !addTransactions ? setAddTransactions(true) : setAddTransactions(false);
+  };
+  const toggleShowTransactions = () =>
     !showTransactions ? setShowTransactions(true) : setShowTransactions(false);
-  }
 
   return (
     <>
       <div>
-        <h2 className="text-2xl">Overview</h2>
+        <h2 className="text-2xl font-bold">Overview</h2>
         <ul className="flex flex-col gap-4 m-4 p-1">
           <li>Income</li>
           <li>Expense</li>
@@ -21,11 +23,23 @@ const Overview = () => {
         </ul>
       </div>
       <div>
-        <h2 className="text-2xl ">Quick Actions</h2>
-        <button onClick={toggleTransactions}>Add Income/Expense</button>
-        {showTransactions && <Transactions />}
-        <button onClick={() => setShow(true)}>Show Transactions</button>
-        {show && <ShowTransaction />}
+        <h2 className="text-2xl font-bold">Quick Actions</h2>
+        <div className="flex flex-col flex-wrap items-start gap-4 p-4">
+          <button
+            className="border-2 p-2 bg-blue-500 text-white w-3xs hover:bg-white hover:text-blue-500 rounded-2xl"
+            onClick={toggleAddTransactions}
+          >
+            Add Income
+          </button>
+          {addTransactions && <Transactions />}
+          <button
+            className="border-2 p-2 bg-orange-500 text-white w-3xs hover:bg-white hover:text-orange-500 rounded-2xl"
+            onClick={toggleShowTransactions}
+          >
+            Show Transactions
+          </button>
+          {showTransactions && <ShowTransaction />}
+        </div>
       </div>
     </>
   );
