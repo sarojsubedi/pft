@@ -20,7 +20,7 @@ const Transactions = () => {
   function addTransaction(e) {
     e.preventDefault();
     if (!isNaN(userInput)) {
-      setBalance((prevBalance) => prevBalance + userInput);
+      setBalance(() => user[0].balance + userInput);
       setShowAddTransaction(true);
     }
     setUserInput(0);
