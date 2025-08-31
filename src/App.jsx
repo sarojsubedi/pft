@@ -7,7 +7,7 @@ function App() {
   return (
     <>
       <Navbar />
-      <div className="flex flex-row gap-4 flex-wrap md:flex-1">
+      <div className="grid auto-cols-max md:grid-flow-col ">
         <div className="flex-wrap m-4 p-4">
           <Overview />
         </div>

@@ -29,7 +29,7 @@ const AddTransaction = ({ balance }) => {
 
   return (
     <div>
-      <div>Balance: {String(balance)}</div>
+      <div>Balance: {balance}</div>
       {error && <div style={{ color: "red" }}>Error: {error}</div>}
     </div>
   );

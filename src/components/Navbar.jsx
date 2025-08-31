@@ -5,20 +5,30 @@ import useravatar from "../assets/useravatar.svg";
 const Navbar = () => {
   return (
     <>
-      <div className="flex items-center flex-wrap border-b border-gray-200">
+      <div className="flex items-center border-b border-gray-200">
         <div className="flex flex-grow flex-row justify-start-safe gap-4 p-4">
           <img className="scale-100" src={logo} alt="logo" />
           <h1>
             <strong>Personal Finance Tracker</strong>
           </h1>
         </div>
-        <div className="flex-grow flex-row">
+        <div className="hidden sm:flex sm:flex-row">
           <ul className="flex flex-row justify-end-safe gap-4 p-4">
-            <li>Dashboard</li>
-            <li>Transactions</li>
-            <li>Budgets</li>
-            <li>Goals</li>
-            <li>Reports</li>
+            <li>
+              <a href="/">Dashboard</a>
+            </li>
+            <li>
+              <a href="#">Transactions</a>
+            </li>
+            <li>
+              <a href="#">Budgets</a>
+            </li>
+            <li>
+              <a href="#">Goals</a>
+            </li>
+            <li>
+              <a href="#">Reports</a>
+            </li>
           </ul>
         </div>
         <div className="flex items-center gap-4 p-4">
