@@ -7,10 +7,10 @@ const Overview = () => {
   const [addTransactions, setAddTransactions] = useState(false);
 
   const toggleAddTransactions = () => {
-    !addTransactions ? setAddTransactions(true) : setAddTransactions(false);
+    addTransactions ? setAddTransactions(false) : setAddTransactions(true);
   };
   const toggleShowTransactions = () =>
-    !showTransactions ? setShowTransactions(true) : setShowTransactions(false);
+    showTransactions ? setShowTransactions(false) : setShowTransactions(true);
 
   return (
     <>
