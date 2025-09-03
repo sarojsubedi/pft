@@ -13,7 +13,7 @@ const ShowTransaction = () => {
       setLocalData(data);
     }
     getTransaction();
-  }, [localData]);
+  }, [localData.balance]);
 
   return (
     <div>

@@ -1,5 +1,7 @@
+import { useContext } from "react";
+import { BalanceContext } from "../context/BalanceContext";
 const Dashboard = () => {
-  const balance = 0;
+  const { balance } = useContext(BalanceContext);
   return (
     <>
       <div className="flex flex-col gap-8 p-4 min-w-1/2">

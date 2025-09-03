@@ -1,5 +1,5 @@
 import { supabase } from "../libs/supabase";
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 
 const AddTransaction = ({ balance }) => {
   const [user, setUser] = useState([]);

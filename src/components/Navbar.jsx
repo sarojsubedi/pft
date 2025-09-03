@@ -3,6 +3,13 @@ import logo from "../assets/logo.svg";
 import notificationbell from "../assets/notificationbell.svg";
 import useravatar from "../assets/useravatar.svg";
 const Navbar = () => {
+  const navItems = [
+    { id: 1, name: "Dashboard", link: "/" },
+    { id: 2, name: "Transactions", link: "/Transactions" },
+    { id: 3, name: "Budget", link: "/Budget" },
+    { id: 4, name: "Goals", link: "/Goals" },
+    { id: 5, name: "Reports", link: "Reports" },
+  ];
   return (
     <>
       <div className="flex items-center border-b border-gray-200">
@@ -14,21 +21,11 @@ const Navbar = () => {
         </div>
         <div className="hidden sm:flex sm:flex-row">
           <ul className="flex flex-row justify-end-safe gap-4 p-4">
-            <li>
-              <a href="/">Dashboard</a>
-            </li>
-            <li>
-              <a href="#">Transactions</a>
-            </li>
-            <li>
-              <a href="#">Budgets</a>
-            </li>
-            <li>
-              <a href="#">Goals</a>
-            </li>
-            <li>
-              <a href="#">Reports</a>
-            </li>
+            {navItems.map((item) => (
+              <li key={item.id}>
+                <a href={item.link}>{item.name}</a>
+              </li>
+            ))}
           </ul>
         </div>
         <div className="flex items-center gap-4 p-4">

@@ -1,26 +1,25 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { supabase } from "../libs/supabase.js";
 import AddTransaction from "./AddTransaction.jsx";
-import ShowTransaction from "./ShowTransaction.jsx";
-
+import { BalanceContext } from "../context/BalanceContext.js";
 const Transactions = () => {
   const [user, setUser] = useState([]);
-  const [balance, setBalance] = useState(0);
+  const { balance, setBalance } = useContext(BalanceContext);
   const [userInput, setUserInput] = useState(0);
   const [showAddTransaction, setShowAddTransaction] = useState(false);
 
-  useEffect(() => {
-    async function getBalance() {
-      const { data } = await supabase.from("userdata").select();
-      setUser(data);
-    }
-    getBalance();
-  }, []);
+  // useEffect(() => {
+  //   async function getBalance() {
+  //     const { data } = await supabase.from("userdata").select();
+  //     setUser(data[0]);
+  //   }
+  //   getBalance();
+  // }, []);
 
   function addTransaction(e) {
     e.preventDefault();
     if (!isNaN(userInput)) {
-      setBalance(() => user[0].balance + userInput);
+      setBalance(() => balance + userInput);
       setShowAddTransaction(true);
     }
     setUserInput(0);
@@ -29,7 +28,7 @@ const Transactions = () => {
   return (
     <>
       <div>
-        <form action="">
+        <form>
           <input
             type="number"
             value={userInput}
