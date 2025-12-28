@@ -1,14 +1,20 @@
-import React from "react";
+import { Link } from "react-router-dom";
 import logo from "../assets/logo.svg";
 import notificationbell from "../assets/notificationbell.svg";
 import useravatar from "../assets/useravatar.svg";
+import Dashboard from "../components/Dashboard.jsx";
+import Transactions from "../pages/Transactions.jsx";
+import Budgets from "../pages/Budget.jsx";
+import Goals from "../pages/Goals.jsx";
+import Reports from "../pages/Reports.jsx";
+
 const Navbar = () => {
   const navItems = [
-    { id: 1, name: "Dashboard", link: "/" },
-    { id: 2, name: "Transactions", link: "/Transactions" },
-    { id: 3, name: "Budget", link: "/Budget" },
-    { id: 4, name: "Goals", link: "/Goals" },
-    { id: 5, name: "Reports", link: "Reports" },
+    { id: 1, name: "Dashboard", link: Dashboard },
+    { id: 2, name: "Transactions", link: Transactions },
+    { id: 3, name: "Budgets", link: Budgets },
+    { id: 4, name: "Goals", link: Goals },
+    { id: 5, name: "Reports", link: Reports },
   ];
   return (
     <>
@@ -23,7 +29,8 @@ const Navbar = () => {
           <ul className="flex flex-row justify-end-safe gap-4 p-4">
             {navItems.map((item) => (
               <li key={item.id}>
-                <a href={item.link}>{item.name}</a>
+                {/* need to replace with react-router-dom Link */}
+                <a href={"#"}>{item.name}</a>
               </li>
             ))}
           </ul>
